@@ -1,0 +1,4 @@
+@mixin focus-ring {
+  outline: var(--alias-border-width-md) solid var(--mapped-border-focus);
+  outline-offset: 3px;
+}
