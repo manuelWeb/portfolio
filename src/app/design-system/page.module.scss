@@ -1,0 +1,137 @@
+.page {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      90deg,
+      transparent calc(100% - 1px),
+      color-mix(in srgb, var(--mapped-border-mute) 72%, transparent)
+        calc(100% - 1px)
+    ),
+    var(--mapped-surface-page);
+  background-size: var(--scale-900) var(--scale-900);
+}
+
+.hero,
+.footer {
+  background: var(--mapped-surface-muted);
+}
+
+.heroInner,
+.mainInner,
+.footerInner {
+  display: grid;
+  gap: var(--scale-600);
+  padding-block: var(--scale-900);
+}
+
+.heroEyebrow,
+.blockLabel,
+.tokenLabel {
+  color: var(--mapped-text-mute);
+  font-size: var(--responsive-paragraph-sm-font-size);
+  line-height: var(--responsive-paragraph-sm-line-height);
+}
+
+.heroTitle {
+  max-width: 14ch;
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h1-font-size);
+  line-height: var(--responsive-h1-line-height);
+}
+
+.heroCopy {
+  max-width: 44rem;
+  color: var(--mapped-text-secondary);
+  font-size: var(--responsive-paragraph-lg-font-size);
+  line-height: var(--responsive-paragraph-lg-line-height);
+}
+
+.metrics {
+  display: grid;
+  gap: var(--scale-300);
+}
+
+.metric {
+  display: grid;
+  gap: var(--scale-100);
+  padding: var(--scale-400);
+  border: var(--alias-border-width-sm) solid var(--mapped-border-default);
+  border-radius: var(--alias-border-radius-lg);
+  background: var(--mapped-surface-default);
+}
+
+.metricValue {
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h5-font-size);
+  font-weight: 700;
+  line-height: var(--responsive-h5-line-height);
+}
+
+.mainInner {
+  padding-block: var(--scale-1000);
+}
+
+.blockGrid {
+  display: grid;
+  gap: var(--scale-400);
+}
+
+.layoutBlock {
+  display: grid;
+  min-height: 10rem;
+  gap: var(--scale-300);
+  align-content: space-between;
+  padding: var(--scale-500);
+  border: var(--alias-border-width-sm) solid var(--mapped-border-secondary);
+  border-radius: var(--alias-border-radius-xl);
+  background: var(--mapped-surface-default);
+  box-shadow: 0 var(--scale-200) var(--scale-600) transparent;
+}
+
+.blockTitle {
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h4-font-size);
+  line-height: var(--responsive-h4-line-height);
+}
+
+.blockText {
+  max-width: 40rem;
+  color: var(--mapped-text-secondary);
+  line-height: var(--responsive-paragraph-md-line-height);
+}
+
+.tokenGrid {
+  display: grid;
+  gap: var(--scale-300);
+}
+
+.tokenCard {
+  display: grid;
+  gap: var(--scale-100);
+  padding: var(--scale-400);
+  border: var(--alias-border-width-sm) solid var(--mapped-border-default);
+  border-radius: var(--alias-border-radius-md);
+  background: var(--mapped-surface-muted);
+}
+
+.tokenValue {
+  color: var(--mapped-text-heading);
+  font-family: var(--font-family-code), monospace;
+  font-size: var(--responsive-paragraph-sm-font-size);
+  line-height: var(--responsive-paragraph-sm-line-height);
+}
+
+.footerInner {
+  color: var(--mapped-text-secondary);
+}
+
+@media (min-width: 48rem) {
+  .metrics,
+  .tokenGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .blockGrid {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
+}
