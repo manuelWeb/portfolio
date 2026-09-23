@@ -1,0 +1,8 @@
+.container {
+  box-sizing: border-box;
+  width: min(
+    calc(100% - (var(--layout-page-gutter) * 2)),
+    var(--layout-container-max-width)
+  );
+  margin-inline: auto;
+}
