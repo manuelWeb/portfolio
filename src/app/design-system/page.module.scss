@@ -1,0 +1,181 @@
+.page {
+  min-height: 100vh;
+  background: var(--mapped-surface-page);
+}
+
+.hero,
+.footer {
+  background: var(--mapped-surface-muted);
+}
+
+.heroInner,
+.mainInner,
+.footerInner {
+  display: grid;
+  gap: var(--scale-600);
+  padding-block: var(--layout-page-gutter);
+}
+
+.heroEyebrow,
+.blockLabel,
+.tokenLabel {
+  color: var(--mapped-text-mute);
+  font-size: var(--responsive-paragraph-sm-font-size);
+  line-height: var(--responsive-paragraph-sm-line-height);
+}
+
+.heroTitle {
+  max-width: 14ch;
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h1-font-size);
+  line-height: var(--responsive-h1-line-height);
+}
+
+.heroCopy {
+  max-width: 44rem;
+  color: var(--mapped-text-secondary);
+  font-size: var(--responsive-paragraph-lg-font-size);
+  line-height: var(--responsive-paragraph-lg-line-height);
+}
+
+.metrics {
+  display: grid;
+  gap: var(--scale-300);
+}
+
+.metric,
+.ruleCard,
+.tokenCard {
+  display: grid;
+  gap: var(--scale-100);
+  padding: var(--scale-400);
+  border: var(--alias-border-width-sm) solid var(--mapped-border-default);
+  border-radius: var(--alias-border-radius-lg);
+  background: var(--mapped-surface-default);
+}
+
+.metricValue {
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h5-font-size);
+  font-weight: 700;
+  line-height: var(--responsive-h5-line-height);
+}
+
+.blockGrid,
+.ruleGrid,
+.tokenGrid {
+  display: grid;
+  gap: var(--scale-400);
+}
+
+.layoutBlock {
+  display: grid;
+  min-height: 10rem;
+  gap: var(--scale-300);
+  align-content: space-between;
+  padding: var(--scale-500);
+  border: var(--alias-border-width-sm) solid var(--mapped-border-secondary);
+  border-radius: var(--alias-border-radius-xl);
+  background: var(--mapped-surface-default);
+}
+
+.blockTitle,
+.ruleTitle {
+  color: var(--mapped-text-heading);
+  font-size: var(--responsive-h4-font-size);
+  line-height: var(--responsive-h4-line-height);
+}
+
+.blockText,
+.ruleText {
+  max-width: 42rem;
+  color: var(--mapped-text-secondary);
+  line-height: var(--responsive-paragraph-md-line-height);
+}
+
+.containerFormula {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--scale-300);
+  overflow-x: auto;
+  border: var(--alias-border-width-sm) solid var(--mapped-border-default);
+  border-radius: var(--alias-border-radius-md);
+  color: var(--mapped-text-heading);
+  background: var(--mapped-surface-muted);
+  font-family: var(--font-family-code), monospace;
+  font-size: var(--responsive-paragraph-sm-font-size);
+  line-height: var(--responsive-paragraph-sm-line-height);
+}
+
+.sectionDemo {
+  display: grid;
+  gap: var(--scale-300);
+  padding: var(--scale-300);
+  border-block: var(--alias-border-width-md) solid
+    var(--mapped-border-secondary);
+  background: var(--mapped-surface-muted);
+}
+
+.sectionBand {
+  display: grid;
+  min-height: 5rem;
+  place-items: center;
+  border: var(--alias-border-width-sm) dashed var(--mapped-border-secondary);
+  color: var(--mapped-text-secondary);
+  background: var(--mapped-surface-default);
+}
+
+.containerDemo {
+  display: grid;
+  grid-template-columns: var(--layout-page-gutter) minmax(0, 1fr) var(
+      --layout-page-gutter
+    );
+  min-height: 6rem;
+  overflow: hidden;
+  border: var(--alias-border-width-sm) solid var(--mapped-border-default);
+  border-radius: var(--alias-border-radius-lg);
+}
+
+.marginDemo {
+  display: grid;
+  place-items: center;
+  color: var(--mapped-text-mute);
+  background: var(--mapped-surface-muted);
+  font-size: var(--responsive-paragraph-xsm-font-size);
+  line-height: var(--responsive-paragraph-xsm-line-height);
+  writing-mode: vertical-rl;
+}
+
+.contentDemo {
+  display: grid;
+  place-items: center;
+  padding: var(--scale-400);
+  color: var(--mapped-text-heading);
+  background: var(--mapped-surface-default);
+  font-weight: 700;
+  text-align: center;
+}
+
+.tokenValue {
+  color: var(--mapped-text-heading);
+  font-family: var(--font-family-code), monospace;
+  font-size: var(--responsive-paragraph-sm-font-size);
+  line-height: var(--responsive-paragraph-sm-line-height);
+}
+
+.footerInner {
+  color: var(--mapped-text-secondary);
+}
+
+@media (min-width: 48rem) {
+  .metrics,
+  .ruleGrid,
+  .tokenGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .blockGrid {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
+}
